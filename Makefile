@@ -70,6 +70,7 @@ release: ## Package and upload a release
 	twine upload dist/*
 
 test: clean-build lint ## Run tests quickly with the default Python
+	python manage.py migrate	
 	./tests/run.py
 
 test-coverage: ## Check code coverage quickly with the default Python
